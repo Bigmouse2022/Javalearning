@@ -17,6 +17,6 @@ public class GoodsTest {
 
         GoodsSeller goodsSeller=new GoodsSeller();
         goodsSeller.sellGoods(books);
-        System.out.print("sss");
+        System.out.print("sss87");
     }
 }
