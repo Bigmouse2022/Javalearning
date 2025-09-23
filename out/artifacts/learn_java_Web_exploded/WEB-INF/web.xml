@@ -23,4 +23,43 @@
         <servlet-name>first</servlet-name>
         <url-pattern>/hi</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <!--        servlet的别名-->
+        <servlet-name>requestMethod</servlet-name>
+        <servlet-class>Servlet_learning.RequestMethodServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <!--        将Servlet与URL绑定-->
+        <servlet-name>requestMethod</servlet-name>
+        <url-pattern>/request_method</url-pattern>
+    </servlet-mapping>
+    <!--************************************************-->
+    <servlet>
+        <servlet-name>create</servlet-name>
+        <servlet-class>Servlet_learning.TestServlet.CreateServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>create</servlet-name>
+        <url-pattern>/create</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>impore</servlet-name>
+        <servlet-class>Servlet_learning.TestServlet.ImportServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>impore</servlet-name>
+        <url-pattern>/impore</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>analysis</servlet-name>
+        <servlet-class>Servlet_learning.TestServlet.AnalysisServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>analysis</servlet-name>
+        <url-pattern>/analysis</url-pattern>
+    </servlet-mapping>
 </web-app>

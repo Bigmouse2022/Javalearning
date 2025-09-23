@@ -1,5 +1,6 @@
 package Servlet_learning;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +9,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class FirstServlet extends HttpServlet {
+    public FirstServlet(){
+        System.out.println("正在创建FirstServlet对象");
+    }
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        System.out.println("正在初始化FirstServlet对象");
+    }
+
+
+
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //接收请求发来的参数
@@ -17,4 +29,10 @@ public class FirstServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println(html);//将htm1发送回浏览器
     }
+
+    @Override
+    public void destroy() {
+        System.out.println("正在销毁FirstServlet对象");
+    }
+
 }
